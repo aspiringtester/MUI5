@@ -1,7 +1,7 @@
-import { Container, Grid, Typography } from "@mui/material";
-import React from "react";
-import cities from "../data.json";
-import Card from "../components/Card";
+import { Container, Grid, Typography } from '@mui/material'
+import React from 'react'
+import cities from '../data.json'
+import Card from '../components/Card'
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
               marginBottom={3}
               marginTop={5}
             >
-              Top {city.name} Tours
+              {city.name}
             </Typography>
             <Grid container spacing={5}>
               {city.tours.map((tour) => (
@@ -26,5 +26,5 @@ export default function Home() {
         ))}
       </Container>
     </>
-  );
+  )
 }

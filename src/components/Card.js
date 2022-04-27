@@ -1,4 +1,4 @@
-import { AccessTime } from "@mui/icons-material";
+import { AccessTime } from '@mui/icons-material'
 import {
   createTheme,
   Grid,
@@ -6,9 +6,9 @@ import {
   Rating,
   ThemeProvider,
   Typography,
-} from "@mui/material";
-import { Box } from "@mui/system";
-import React from "react";
+} from '@mui/material'
+import { Box } from '@mui/system'
+import React from 'react'
 
 const theme = createTheme({
   components: {
@@ -16,7 +16,7 @@ const theme = createTheme({
       variants: [
         {
           props: {
-            variant: "body2",
+            variant: 'body2',
           },
           style: {
             fontSize: 11,
@@ -24,7 +24,7 @@ const theme = createTheme({
         },
         {
           props: {
-            variant: "body3",
+            variant: 'body3',
           },
           style: {
             fontSize: 9,
@@ -33,7 +33,7 @@ const theme = createTheme({
       ],
     },
   },
-});
+})
 
 export default function Card({ tour }) {
   return (
@@ -51,19 +51,19 @@ export default function Card({ tour }) {
             </Typography>
             <Box
               sx={{
-                display: "flex",
-                alignItems: "center",
+                display: 'flex',
+                alignItems: 'center',
               }}
             >
-              <AccessTime style={{ width: 12.5 }} />
+              {/* <AccessTime style={{ width: 12.5 }} /> */}
               <Typography variant="body2" component="p" marginLeft={0.5}>
-                {tour.duration} hours
+                {/* {tour.duration} hours */}
               </Typography>
             </Box>
             <Box
               sx={{
-                display: "flex",
-                alignItems: "center",
+                display: 'flex',
+                alignItems: 'center',
               }}
               marginTop={3}
             >
@@ -83,16 +83,16 @@ export default function Card({ tour }) {
             </Box>
             <Box
               sx={{
-                display: "flex",
+                display: 'flex',
               }}
             >
               <Typography variant="h6" component="h2" marginTop={0}>
-                From C ${tour.price}
+                Price: ${tour.price}
               </Typography>
             </Box>
           </Box>
         </Paper>
       </ThemeProvider>
     </Grid>
-  );
+  )
 }
